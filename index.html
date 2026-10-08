@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UnifyX — Your phone, managed from Windows</title>
+  <meta name="description" content="UnifyX connects your Android phone to Windows over USB. Manage apps, transfer files, install APKs, and mirror the screen — no ads, no account, one installer." />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand-mark" href="#top" aria-label="UnifyX home">
+      <img src="assets/logo.png" alt="" width="36" height="36" />
+      <span>UnifyX</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#wireless">Wireless</a>
+      <a class="nav-cta" href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-label="Introduce UnifyX">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-img" src="assets/app-apps.png" alt="" width="1600" height="900" />
+        <div class="hero-veil"></div>
+      </div>
+      <div class="hero-copy">
+        <p class="brand-word" aria-label="UnifyX">
+          <img src="assets/logo.png" alt="" width="56" height="56" />
+          <span>UnifyX</span>
+        </p>
+        <h1>Your Android phone,<br />from your Windows desk.</h1>
+        <p class="lede">Manage apps, move files, install APKs, and mirror the screen over USB — private, local, and free of ads.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="downloads/UnifyX-Setup-1.0.0.exe" download>Download for Windows</a>
+          <a class="btn btn-ghost" href="#features">See what it does</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band reveal" id="features">
+      <div class="band-inner">
+        <p class="eyebrow">The real product</p>
+        <h2>Everything you need between PC and phone.</h2>
+        <p class="section-lede">One Windows app. Bundled ADB and scrcpy. No accounts, no cloud sync, no ads.</p>
+      </div>
+    </section>
+
+    <section class="feature feature-a reveal">
+      <div class="feature-text">
+        <h2>See every app. Launch any one.</h2>
+        <p>Browse user and system apps with real icons and names. Search, export APKs, install singles or split packages, uninstall with verification.</p>
+      </div>
+      <figure class="feature-visual shot">
+        <img src="assets/app-apps.png" alt="UnifyX All apps view with device sidebar and app grid" width="1600" height="900" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="feature feature-b reveal">
+      <figure class="feature-visual shot">
+        <img src="assets/app-splash.png" alt="UnifyX connecting screen while setting up the companion app" width="1600" height="900" loading="lazy" />
+      </figure>
+      <div class="feature-text">
+        <h2>Connect once. Stay in sync.</h2>
+        <p>Plug in over USB, accept debugging, and UnifyX Connect indexes apps in the background — with live status for ADB, device link, and setup.</p>
+      </div>
+    </section>
+
+    <section class="feature feature-a reveal">
+      <div class="feature-text">
+        <h2>Gallery and files, both ways.</h2>
+        <p>Browse internal storage, open folders, upload from the PC, and pull media back. Progress stays visible so large transfers never feel silent.</p>
+      </div>
+      <figure class="feature-visual shot">
+        <img src="assets/app-files.png" alt="UnifyX File manager browsing phone storage" width="1600" height="900" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="strip reveal" id="how">
+      <div class="strip-inner">
+        <h2>Three steps. Then you’re in.</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num">01</span>
+            <strong>Install UnifyX</strong>
+            <span>One Setup.exe — ADB and scrcpy travel with it.</span>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <strong>Enable USB debugging</strong>
+            <span>Developer options on the phone, accept the prompt.</span>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <strong>Plug in and sync</strong>
+            <span>UnifyX Connect indexes apps in the background.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="wireless reveal" id="wireless">
+      <div class="wireless-inner">
+        <p class="eyebrow">Optional</p>
+        <h2>Want it wireless? Use Tailscale.</h2>
+        <p class="section-lede">Keep UnifyX untethered after a one-time USB setup. Tailscale links your PC and phone on a private network — then ADB runs over that IP.</p>
+        <ol class="wireless-steps">
+          <li>
+            <span class="step-num">01</span>
+            <div>
+              <strong>Install Tailscale on both devices</strong>
+              <span>Sign in on your Windows PC and Android phone so they share the same Tailscale network.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <div>
+              <strong>Connect once over USB</strong>
+              <span>Plug the phone in, accept USB debugging, and confirm UnifyX sees the device.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <div>
+              <strong>Enable ADB over TCP/IP</strong>
+              <span>Open Command Prompt and run:</span>
+              <pre class="cmd" tabindex="0"><code>adb tcpip 5555</code></pre>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <div>
+              <strong>Unplug, then connect the Tailscale IP</strong>
+              <span>Disconnect USB. In Tailscale, copy your phone’s IP, then run:</span>
+              <pre class="cmd" tabindex="0"><code>adb connect PHONE_TAILSCALE_IP:5555</code></pre>
+              <span class="hint">Replace <code>PHONE_TAILSCALE_IP</code> with the address shown in Tailscale for your phone.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">05</span>
+            <div>
+              <strong>Open UnifyX and enjoy wireless</strong>
+              <span>Refresh devices in the app — manage apps, files, and mirroring without the cable.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="promise reveal">
+      <div class="promise-inner">
+        <h2>Local by design.</h2>
+        <p>Traffic stays on your USB cable. No marketplace, no analytics wall, no “upgrade to remove ads.” Just a tool that respects the desk you work at.</p>
+        <ul class="promise-list">
+          <li>Bundled platform-tools + scrcpy</li>
+          <li>Companion app for icons and media</li>
+          <li>Split APK install and app export</li>
+          <li>Works offline once installed</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="download reveal" id="download">
+      <div class="download-inner">
+        <img class="download-mark" src="assets/logo.png" alt="" width="72" height="72" />
+        <h2>Get UnifyX for Windows</h2>
+        <p>Self-contained installer for Windows 10 and 11. Drop it on another PC and it just works.</p>
+        <a class="btn btn-primary btn-lg" href="downloads/UnifyX-Setup-1.0.0.exe" download>Download UnifyX-Setup-1.0.0.exe</a>
+        <p class="fine">~45 MB · x64 · includes ADB, scrcpy, and UnifyX Connect</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <a class="brand-mark" href="#top">
+        <img src="assets/logo.png" alt="" width="28" height="28" />
+        <span>UnifyX</span>
+      </a>
+      <p>Android on your terms. From the Windows desktop.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
